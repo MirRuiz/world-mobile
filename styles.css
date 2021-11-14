@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a2540;
+}
+
+body header {
+  padding: 10px;
+  min-height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .header-logo .logo {
+  display: none;
+}
+
+body header .header-logo .marca {
+  width: 20vw;
+}
+
+body header nav .ul-menu {
+  display: none;
+}
+
+body header nav img.img-burguer {
+  width: 10vw;
+}
+
+body header button {
+  display: none;
+}
+
+body main {
+  padding: 10px 20px;
+}
+
+body main .titulo {
+  color: white;
+  font-family: "Manrope";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .titulo h3 {
+  padding: 5px 15px;
+}
+
+body main .grid-container .item {
+  background-color: white;
+  margin: 1.5rem;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 0.5fr 1fr;
+      grid-template-rows: 1fr 0.5fr 1fr;
+  justify-items: center;
+}
+
+body main .grid-container .item .orange {
+  color: orange;
+}
+
+body main .grid-container .item .pink {
+  color: palevioletred;
+}
+
+body main .grid-container .item .blue {
+  color: blue;
+}
+
+body footer {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  padding: 20px;
+}
+
+body footer .footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer ul.menu-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+
+body footer ul.menu-footer a {
+  text-decoration: none;
+  color: black;
+  font-size: small;
+  font-font-family: "Manrope";
+}
+
+body footer ul.menu-footer a:hover {
+  color: #776ba5ee;
+}
+
+body footer button.contact {
+  background-color: #776ba5ee;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  height: 5vh;
+  font-family: "Manrope";
+}
+/*# sourceMappingURL=styles.css.map */

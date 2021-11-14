@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a2540;
+  header {
+    padding: 10px;
+    min-height: 15vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-logo {
+      .logo {
+        display: none;
+      }
+      .marca {
+        width: 20vw;
+      }
+    }
+    nav {
+      .ul-menu {
+        display: none; ////oculto hasta dar vida al menu hambueguesa
+      }
+      img.img-burguer {
+        width: 10vw;
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+  main {
+    padding: 10px 20px;
+    .titulo {
+      color: white;
+      font-family: "Manrope";
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        padding:5px 15px;
+      }
+    }
+    .grid-container {
+      .item {
+        background-color: white;
+        margin: 1.5rem;
+        padding: 15px;
+        display: grid;
+        grid-template-rows: 1fr 0.5fr 1fr;
+        justify-items: center;
+        .orange {
+          color: orange;
+        }
+        .pink {
+          color: palevioletred;
+        }
+        .blue {
+          color: blue;
+        }
+      }
+    }
+  }
+  footer{
+      background-color: white;
+      display: grid;
+      padding: 20px;
+      .footer-logo{
+          display: flex;
+          justify-content: center;
+      }
+     ul.menu-footer{
+         display:grid;
+         grid-template-columns: 1fr 1fr;
+         list-style: none;
+         a{
+            text-decoration: none;
+            color:black;
+            font: {
+                size:small;
+                font-family: "Manrope";
+            }
+            &:hover{
+                color:#776ba5ee
+            }
+            
+         }
+
+     }
+     button.contact{
+         background-color:#776ba5ee;
+         color:white;
+         border-radius: 5px;
+         border:none;
+         height:5vh;
+         font-family: "Manrope";
+     }
+      
+  }
+}
