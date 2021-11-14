@@ -3,11 +3,13 @@ body {
   padding: 0;
   background-color: #0a2540;
   header {
-    padding: 10px;
     min-height: 15vh;
+    position: fixed;
+    background-color: #0a2540;
+    width: 100vw;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     .header-logo {
       .logo {
@@ -23,6 +25,7 @@ body {
       }
       img.img-burguer {
         width: 10vw;
+       
       }
     }
     button {
@@ -30,7 +33,8 @@ body {
     }
   }
   main {
-    padding: 10px 20px;
+    padding: 0px 20px;
+    padding-top:100px;
     .titulo {
       color: white;
       font-family: "Manrope";
@@ -45,11 +49,12 @@ body {
     .grid-container {
       .item {
         background-color: white;
-        margin: 1.5rem;
+        margin: 0.5rem;
         padding: 15px;
         display: grid;
         grid-template-rows: 1fr 0.5fr 1fr;
         justify-items: center;
+        
         .orange {
           color: orange;
         }
