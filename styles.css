@@ -7,6 +7,8 @@ body {
 body header {
   min-height: 15vh;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: #0a2540;
   width: 100vw;
   display: -webkit-box;
@@ -41,7 +43,7 @@ body header button {
 
 body main {
   padding: 0px 20px;
-  padding-top: 100px;
+  margin-top: 110px;
 }
 
 body main .titulo {
@@ -117,16 +119,117 @@ body footer ul.menu-footer a {
   font-font-family: "Manrope";
 }
 
-body footer ul.menu-footer a:hover {
-  color: #776ba5ee;
-}
-
-body footer button.contact {
+body footer .contact {
   background-color: #776ba5ee;
   color: white;
   border-radius: 5px;
   border: none;
   height: 5vh;
   font-family: "Manrope";
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  body main {
+    margin-top: 190px;
+  }
+  body main .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  body header .header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body header .header-logo:hover {
+    -webkit-filter: saturate(200%);
+            filter: saturate(200%);
+  }
+  body header .header-logo .logo {
+    display: block;
+  }
+  body header .header-logo .marca {
+    width: 3vw;
+  }
+  body header nav .ul-menu {
+    list-style: none;
+    width: 50vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body header nav .ul-menu a {
+    color: white;
+    text-decoration: none;
+  }
+  body header nav .ul-menu a:hover {
+    padding: 5px;
+    background: #1d4b79;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 4px 16px #1a7396;
+            box-shadow: 0 4px 16px #1a7396;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  body header nav img.img-burguer {
+    display: none;
+  }
+  body header button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 5px;
+    background-color: #776ba5ee;
+    border: none;
+    color: white;
+    height: 5vh;
+    font-family: "Manrope";
+    cursor: pointer;
+  }
+  body header button:hover {
+    color: #1883ba;
+    background: #0a2540;
+  }
+  body main {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+  body main .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  body footer {
+    -ms-grid-columns: 0.75fr 2fr 0.75fr;
+        grid-template-columns: 0.75fr 2fr 0.75fr;
+  }
+  body footer .footer-logo {
+    width: 15vw;
+  }
+  body footer ul.menu-footer {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    line-height: 25px;
+  }
+  body footer .contact:hover {
+    color: #1883ba;
+    background: #0a2540;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,11 +1,15 @@
+@import "_variables.scss";
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #0a2540;
+  background-color: $primary-color;
   header {
     min-height: 15vh;
     position: fixed;
-    background-color: #0a2540;
+    top: 0;
+    left: 0;
+    background-color: $primary-color;
     width: 100vw;
 
     display: flex;
@@ -25,7 +29,6 @@ body {
       }
       img.img-burguer {
         width: 10vw;
-       
       }
     }
     button {
@@ -34,16 +37,16 @@ body {
   }
   main {
     padding: 0px 20px;
-    padding-top:100px;
+    margin-top: 110px;
     .titulo {
       color: white;
-      font-family: "Manrope";
+      font-family: $primary-font;
 
       display: flex;
       flex-direction: column;
       align-items: center;
       h3 {
-        padding:5px 15px;
+        padding: 5px 15px;
       }
     }
     .grid-container {
@@ -54,7 +57,7 @@ body {
         display: grid;
         grid-template-rows: 1fr 0.5fr 1fr;
         justify-items: center;
-        
+
         .orange {
           color: orange;
         }
@@ -67,40 +70,129 @@ body {
       }
     }
   }
-  footer{
-      background-color: white;
+  footer {
+    background-color: white;
+    display: grid;
+    padding: 20px;
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+    }
+    ul.menu-footer {
       display: grid;
-      padding: 20px;
-      .footer-logo{
-          display: flex;
-          justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: black;
+        font: {
+          size: small;
+          font-family: $primary-font;
+        }
       }
-     ul.menu-footer{
-         display:grid;
-         grid-template-columns: 1fr 1fr;
-         list-style: none;
-         a{
-            text-decoration: none;
-            color:black;
-            font: {
-                size:small;
-                font-family: "Manrope";
-            }
-            &:hover{
-                color:#776ba5ee
-            }
-            
-         }
+    }
+    .contact {
+      background-color: $secondary-color;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      height: 5vh;
+      font-family: $primary-font;
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    main {
+      margin-top: 190px;
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+@media screen and (min-width: 801px) {
+  body {
+    header {
+      .header-logo {
+        display: flex;
+        &:hover{
+          filter:saturate(200%);
+        }
 
-     }
-     button.contact{
-         background-color:#776ba5ee;
-         color:white;
-         border-radius: 5px;
-         border:none;
-         height:5vh;
-         font-family: "Manrope";
-     }
-      
+        .logo {
+          display: block;
+        }
+        .marca {
+          width: 3vw;
+        }
+      }
+      nav {
+        .ul-menu {
+          list-style: none;
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+          a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+              padding: 5px;
+              background: #1d4b79;
+              border-radius: 50%;
+              box-shadow: 0 4px 16px rgb(26, 115, 150);
+              transition: all 0.2s ease;
+            }
+          }
+        }
+        img.img-burguer {
+          display: none;
+        }
+      }
+      button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        border-radius: 5px;
+        background-color: $secondary-color;
+        border: none;
+        color: white;
+        height: 5vh;
+        font-family: $primary-font;
+        cursor: pointer;
+        &:hover {
+          color: #1883ba;
+          background: #0a2540;
+        }
+      }
+    }
+    main{
+      // padding: 0px 250px;
+      margin-left: 5em;
+      margin-right: 5em;
+      .grid-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    footer {
+      grid-template-columns: 0.75fr 2fr 0.75fr;
+      .footer-logo {
+        width: 15vw;
+      }
+      ul.menu-footer {
+        grid-template-columns: repeat(3, 1fr);
+        line-height: 25px;
+      }
+      .contact{
+        &:hover{
+          color: #1883ba;
+          background: $primary-color;
+        }
+      }
+    }
   }
 }
