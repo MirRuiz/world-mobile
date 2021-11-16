@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: $primary-color;
   header {
-    min-height: 15vh;
+    height: 15%;
     position: fixed;
     top: 0;
     left: 0;
@@ -94,7 +94,7 @@ body {
         }
       }
     }
-    .contact {
+    button.contact {
       background-color: $secondary-color;
       color: white;
       border-radius: 5px;
@@ -102,13 +102,23 @@ body {
       height: 5vh;
       font-family: $primary-font;
       cursor: pointer;
+
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      &:hover{
+            color: #1883ba;
+            background: $primary-color;
+          }
     }
   }
+
+  
 
 @media screen and (min-width: 600px) {
   body {
     main {
-      margin-top: 190px;
+      margin-top: 180px;
       .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -189,12 +199,6 @@ body {
       ul.menu-footer {
         grid-template-columns: repeat(3, 1fr);
         line-height: 25px;
-      }
-      .contact{
-        &:hover{
-          color: #1883ba;
-          background: $primary-color;
-        }
       }
     }
   }
