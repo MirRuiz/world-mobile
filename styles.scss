@@ -8,7 +8,7 @@ body {
     height: 15%;
     position: fixed;
     top: 0;
-    left: 0;
+    // left: 0;
     background-color: $primary-color;
     width: 100vw;
 
@@ -20,103 +20,154 @@ body {
         display: none;
       }
       .marca {
-        width: 20vw;
+        width: 150%;
       }
     }
     nav {
-      .ul-menu {
-        display: none; ////oculto hasta dar vida al menu hambueguesa
-      }
-        img.img-burguer {
-          width: 10vw;
-        }
-
-      }
-    }
-    button {
-      display: none;
-    }
-  }
-  main {
-    padding: 0px 20px;
-    margin-top: 110px;
-    .titulo {
-      color: white;
-      font-family: $primary-font;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h3 {
-        padding: 5px 15px;
-      }
-    }
-    .grid-container {
-      margin-bottom: 5vh;
-      .item {
-        background-color: white;
-        margin: 0.5rem;
-        padding: 15px;
-        display: grid;
-        grid-template-rows: 1fr 0.5fr 1fr;
-        justify-items: center;
-
-        .orange {
-          color: orange;
-        }
-        .pink {
-          color: palevioletred;
-        }
-        .blue {
-          color: blue;
-        }
-      }
-    }
-  }
-  footer {
-    background-color: white;
-    display: grid;
-    padding: 20px;
-    .footer-logo {
+      //prueba boton
+      height: 100px;
+      width: 100px;
       display: flex;
       justify-content: center;
-    }
-    ul.menu-footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      list-style: none;
-      a {
-        text-decoration: none;
-        color: black;
-        font: {
-          size: small;
-          font-family: $primary-font;
+      align-items: center;
+      #ckeck {
+        display: none;
+        &:checked ~ .ul-menu {
+          height: 100vh;
+          width: 100vw;
+        }
+        &:checked ~ .ul-menu li {
+          display: block;
         }
       }
-    }
-    button.contact {
-      background-color: $secondary-color;
-      color: white;
-      border-radius: 5px;
-      border: none;
-      height: 5vh;
-      font-family: $primary-font;
-      cursor: pointer;
+      .bar-btn {
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+      }
+      ul.ul-menu {
+        // display: none; ////oculto hasta dar vida al menu hambueguesa
+        position: fixed;
+        // width: 100vw;
+        // height: 100%;
+        top: 100px;
+        background-color: $secondary-color;
+        text-align: center;
+        transition: all 0.5s;
+        li {
+          display: none;
+          line-height: 30px;
+          margin: 50px 0;
+          transition: all 5s;
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
 
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      &:hover{
-            color: #1883ba;
-            background: $primary-color;
+            &:hover {
+              color: black;
+              transition: 0.3s;
+            }
           }
+        }
+      }
+      // img.img-burguer {
+      //   width: 10vw;
+      // }
     }
   }
+  button {
+    display: none;
+  }
+}
+main {
+  padding: 0px 20px;
+  margin-top: 100px;
+  .titulo {
+    color: white;
+    font-family: $primary-font;
 
-  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      padding: 5px 15px;
+    }
+  }
+  .grid-container {
+    margin-bottom: 5vh;
+    .item {
+      background-color: white;
+      margin: 0.5rem;
+      padding: 15px;
+      display: grid;
+      grid-template-rows: 1fr 0.5fr 1fr;
+      justify-items: center;
+
+      .orange {
+        color: orange;
+      }
+      .pink {
+        color: palevioletred;
+      }
+      .blue {
+        color: blue;
+      }
+    }
+  }
+}
+footer {
+  background-color: white;
+  display: grid;
+  padding: 20px;
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+  ul.menu-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: black;
+      font: {
+        size: small;
+        font-family: $primary-font;
+      }
+    }
+  }
+  button.contact {
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    height: 5vh;
+    font-family: $primary-font;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      color: #1883ba;
+      background: $primary-color;
+    }
+  }
+}
 
 @media screen and (min-width: 600px) {
   body {
+    header {
+      .header-logo {
+        display: flex;
+        .logo {
+          display: flex;
+        }
+      }
+    }
     main {
       margin-top: 180px;
       .grid-container {
@@ -129,76 +180,99 @@ body {
 @media screen and (min-width: 801px) {
   body {
     header {
+      display: flex;
+      justify-content: space-around;
       .header-logo {
-        display: flex;
-        &:hover{
-          filter:saturate(200%);
+        &:hover {
+          filter: saturate(200%);
         }
-
         .logo {
           display: block;
         }
         .marca {
-          width: 3vw;
+          // width: 3vw;
         }
       }
       nav {
-        .ul-menu {
-          list-style: none;
-          width: 50vw;
+        // display:flex;
+        // justify-content:space-around;
+        i.fas.fa-bars {
+          display: none;
+        }
+        ////////////mirar por aqui
+        ul.ul-menu {
+          background-color: $primary-color;
+          list-style: none; //
+          width: 45%;
           display: flex;
-          justify-content: space-around;
-          a {
-            color: white;
-            text-decoration: none;
-            &:hover {
-              padding: 5px;
-              background: #1d4b79;
-              border-radius: 50%;
-              box-shadow: 0 4px 16px rgb(26, 115, 150);
-              transition: all 0.2s ease;
+          justify-content: space-between;
+          top: 0;
+          transition: none;
+          li {
+            display: flex;
+            line-height: 0px;
+            transition: none;
+            a {
+              color: white;
+              text-decoration: none;
+              // font-size: 5px;
+              &:hover {
+                padding: 10px;
+                color: white;
+                background: #1d4b79;
+                border-radius: 50%;
+                box-shadow: 0 4px 16px rgb(26, 115, 150);
+                transition: all 0.2s ease;
+              }
             }
           }
         }
-        img.img-burguer {
-          display: none;
-        }
       }
-      button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        border-radius: 5px;
-        background-color: $secondary-color;
-        border: none;
-        color: white;
-        height: 5vh;
-        font-family: $primary-font;
-        cursor: pointer;
-        &:hover {
-          color: #1883ba;
-          background: #0a2540;
-        }
+      img.img-burguer {
+        display: none;
       }
     }
-    main{
+    button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border-radius: 5px;
+      background-color: $secondary-color;
+      border: none;
+      color: white;
+      height: 5vh;
+      font-family: $primary-font;
+      cursor: pointer;
+      &:hover {
+        color: #1883ba;
+        background: #0a2540;
+      }
+    }
+    main {
       // padding: 0px 250px;
-      margin-left: 5em;
-      margin-right: 5em;
-      .grid-container{
+      margin-left: 8em;
+      margin-right: 8em;
+      .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
       }
     }
     footer {
       grid-template-columns: 0.75fr 2fr 0.75fr;
+      align-items: center;
       .footer-logo {
+        display: inline-block;
         width: 15vw;
       }
       ul.menu-footer {
         grid-template-columns: repeat(3, 1fr);
         line-height: 25px;
+        a {
+          &:hover {
+            color: $secondary-color;
+          }
+        }
       }
     }
   }

@@ -8,7 +8,6 @@ body header {
   height: 15%;
   position: fixed;
   top: 0;
-  left: 0;
   background-color: #0a2540;
   width: 100vw;
   display: -webkit-box;
@@ -26,15 +25,71 @@ body header .header-logo .logo {
 }
 
 body header .header-logo .marca {
-  width: 20vw;
+  width: 150%;
 }
 
-body header nav .ul-menu {
+body header nav {
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav #ckeck {
   display: none;
 }
 
-body header nav img.img-burguer {
-  width: 10vw;
+body header nav #ckeck:checked ~ .ul-menu {
+  height: 100vh;
+  width: 100vw;
+}
+
+body header nav #ckeck:checked ~ .ul-menu li {
+  display: block;
+}
+
+body header nav .bar-btn {
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+body header nav ul.ul-menu {
+  position: fixed;
+  top: 100px;
+  background-color: #776ba5ee;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body header nav ul.ul-menu li {
+  display: none;
+  line-height: 30px;
+  margin: 50px 0;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+
+body header nav ul.ul-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+body header nav ul.ul-menu li a:hover {
+  color: black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 body button {
@@ -43,7 +98,7 @@ body button {
 
 main {
   padding: 0px 20px;
-  margin-top: 110px;
+  margin-top: 100px;
 }
 
 main .titulo {
@@ -148,6 +203,16 @@ footer button.contact:hover {
 }
 
 @media screen and (min-width: 600px) {
+  body header .header-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body header .header-logo .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   body main {
     margin-top: 180px;
   }
@@ -160,10 +225,12 @@ footer button.contact:hover {
 }
 
 @media screen and (min-width: 801px) {
-  body header .header-logo {
+  body header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   body header .header-logo:hover {
     -webkit-filter: saturate(200%);
@@ -172,24 +239,38 @@ footer button.contact:hover {
   body header .header-logo .logo {
     display: block;
   }
-  body header .header-logo .marca {
-    width: 3vw;
+  body header nav i.fas.fa-bars {
+    display: none;
   }
-  body header nav .ul-menu {
+  body header nav ul.ul-menu {
+    background-color: #0a2540;
     list-style: none;
-    width: 50vw;
+    width: 45%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    top: 0;
+    -webkit-transition: none;
+    transition: none;
   }
-  body header nav .ul-menu a {
+  body header nav ul.ul-menu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 0px;
+    -webkit-transition: none;
+    transition: none;
+  }
+  body header nav ul.ul-menu li a {
     color: white;
     text-decoration: none;
   }
-  body header nav .ul-menu a:hover {
-    padding: 5px;
+  body header nav ul.ul-menu li a:hover {
+    padding: 10px;
+    color: white;
     background: #1d4b79;
     border-radius: 50%;
     -webkit-box-shadow: 0 4px 16px #1a7396;
@@ -197,10 +278,10 @@ footer button.contact:hover {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
-  body header nav img.img-burguer {
+  body header img.img-burguer {
     display: none;
   }
-  body header button {
+  body button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -219,13 +300,13 @@ footer button.contact:hover {
     font-family: "Manrope";
     cursor: pointer;
   }
-  body header button:hover {
+  body button:hover {
     color: #1883ba;
     background: #0a2540;
   }
   body main {
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 8em;
+    margin-right: 8em;
   }
   body main .grid-container {
     display: -ms-grid;
@@ -236,14 +317,21 @@ footer button.contact:hover {
   body footer {
     -ms-grid-columns: 0.75fr 2fr 0.75fr;
         grid-template-columns: 0.75fr 2fr 0.75fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body footer .footer-logo {
+    display: inline-block;
     width: 15vw;
   }
   body footer ul.menu-footer {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     line-height: 25px;
+  }
+  body footer ul.menu-footer a:hover {
+    color: #776ba5ee;
   }
 }
 /*# sourceMappingURL=styles.css.map */
