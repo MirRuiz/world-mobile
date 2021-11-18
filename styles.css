@@ -5,7 +5,7 @@ body {
 }
 
 body header {
-  height: 15%;
+  height: 10%;
   position: fixed;
   top: 0;
   background-color: #0a2540;
@@ -25,7 +25,7 @@ body header .header-logo .logo {
 }
 
 body header .header-logo .marca {
-  width: 150%;
+  width: 3em;
 }
 
 body header nav {
@@ -83,7 +83,6 @@ body header nav ul.ul-menu li a {
   text-decoration: none;
   font-size: 16px;
   text-transform: uppercase;
-  font-weight: 600;
 }
 
 body header nav ul.ul-menu li a:hover {
@@ -116,10 +115,6 @@ main .titulo {
           align-items: center;
 }
 
-main .titulo h3 {
-  padding: 5px 15px;
-}
-
 main .grid-container {
   margin-bottom: 5vh;
 }
@@ -133,6 +128,7 @@ main .grid-container .item {
   -ms-grid-rows: 1fr 0.5fr 1fr;
       grid-template-rows: 1fr 0.5fr 1fr;
   justify-items: center;
+  gap: 25px;
 }
 
 main .grid-container .item .orange {
@@ -175,7 +171,7 @@ footer ul.menu-footer a {
   text-decoration: none;
   color: black;
   font-size: small;
-  font-font-family: "Manrope";
+  font-family: "Manrope";
 }
 
 footer button.contact {
@@ -213,9 +209,6 @@ footer button.contact:hover {
     display: -ms-flexbox;
     display: flex;
   }
-  body main {
-    margin-top: 180px;
-  }
   body main .grid-container {
     display: -ms-grid;
     display: grid;
@@ -224,11 +217,8 @@ footer button.contact:hover {
   }
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 951px) {
   body header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -239,11 +229,14 @@ footer button.contact:hover {
   body header .header-logo .logo {
     display: block;
   }
+  body header nav {
+    height: 10%;
+  }
   body header nav i.fas.fa-bars {
     display: none;
   }
   body header nav ul.ul-menu {
-    background-color: #0a2540;
+    background-color: transparent;
     list-style: none;
     width: 45%;
     display: -webkit-box;
@@ -252,9 +245,14 @@ footer button.contact:hover {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    top: 0;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    top: auto;
     -webkit-transition: none;
     transition: none;
+    margin: auto;
+    padding: 0;
   }
   body header nav ul.ul-menu li {
     display: -webkit-box;
@@ -269,7 +267,7 @@ footer button.contact:hover {
     text-decoration: none;
   }
   body header nav ul.ul-menu li a:hover {
-    padding: 10px;
+    padding: 5px;
     color: white;
     background: #1d4b79;
     border-radius: 50%;
@@ -277,9 +275,6 @@ footer button.contact:hover {
             box-shadow: 0 4px 16px #1a7396;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-  }
-  body header img.img-burguer {
-    display: none;
   }
   body button {
     display: -webkit-box;

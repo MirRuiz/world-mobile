@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: $primary-color;
   header {
-    height: 15%;
+    height: 10%;
     position: fixed;
     top: 0;
     // left: 0;
@@ -20,7 +20,7 @@ body {
         display: none;
       }
       .marca {
-        width: 150%;
+        width: 3em
       }
     }
     nav {
@@ -59,12 +59,13 @@ body {
           line-height: 30px;
           margin: 50px 0;
           transition: all 5s;
+          
           a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             text-transform: uppercase;
-            font-weight: 600;
+            // font-weight: 600;
 
             &:hover {
               color: black;
@@ -93,7 +94,7 @@ main {
     flex-direction: column;
     align-items: center;
     h3 {
-      padding: 5px 15px;
+      // padding: 5px 15px;
     }
   }
   .grid-container {
@@ -105,6 +106,7 @@ main {
       display: grid;
       grid-template-rows: 1fr 0.5fr 1fr;
       justify-items: center;
+      gap:25px;
 
       .orange {
         color: orange;
@@ -135,7 +137,7 @@ footer {
       color: black;
       font: {
         size: small;
-        font-family: $primary-font;
+        family: $primary-font;
       }
     }
   }
@@ -169,7 +171,7 @@ footer {
       }
     }
     main {
-      margin-top: 180px;
+      // margin-top: 180px;
       .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -177,10 +179,19 @@ footer {
     }
   }
 }
-@media screen and (min-width: 801px) {
+// @media screen and (min-width:760px){
+//   body{
+//     header{
+//       display:grid;
+//       flex-direction: row;
+//       background-color: transparent;
+//     }
+
+//   }
+// }
+@media screen and (min-width: 951px) {
   body {
     header {
-      display: flex;
       justify-content: space-around;
       .header-logo {
         &:hover {
@@ -194,20 +205,23 @@ footer {
         }
       }
       nav {
-        // display:flex;
-        // justify-content:space-around;
+        height: 10%;
         i.fas.fa-bars {
           display: none;
         }
         ////////////mirar por aqui
         ul.ul-menu {
-          background-color: $primary-color;
+          // position: sticky;
+          background-color:transparent;
           list-style: none; //
           width: 45%;
           display: flex;
           justify-content: space-between;
-          top: 0;
+          flex-grow: 3;
+          top: auto;
           transition: none;
+          margin:auto;
+          padding: 0;
           li {
             display: flex;
             line-height: 0px;
@@ -217,7 +231,7 @@ footer {
               text-decoration: none;
               // font-size: 5px;
               &:hover {
-                padding: 10px;
+                padding: 5px;
                 color: white;
                 background: #1d4b79;
                 border-radius: 50%;
@@ -227,9 +241,6 @@ footer {
             }
           }
         }
-      }
-      img.img-burguer {
-        display: none;
       }
     }
     button {
