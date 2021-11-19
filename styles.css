@@ -66,8 +66,8 @@ body header nav ul.ul-menu {
   top: 100px;
   background-color: #776ba5ee;
   text-align: center;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: margin-right .4s;
+  transition: margin-right .4s;
 }
 
 body header nav ul.ul-menu li {
@@ -217,10 +217,14 @@ footer button.contact:hover {
   }
 }
 
-@media screen and (min-width: 951px) {
+@media screen and (min-width: 1000px) {
   body header {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body header .header-logo {
+    margin-left: 2em;
   }
   body header .header-logo:hover {
     -webkit-filter: saturate(200%);
@@ -270,13 +274,11 @@ footer button.contact:hover {
     padding: 5px;
     color: white;
     background: #1d4b79;
-    border-radius: 50%;
     -webkit-box-shadow: 0 4px 16px #1a7396;
             box-shadow: 0 4px 16px #1a7396;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
   }
   body button {
+    margin-right: 2em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -300,8 +302,8 @@ footer button.contact:hover {
     background: #0a2540;
   }
   body main {
-    margin-left: 8em;
-    margin-right: 8em;
+    margin-left: 7em;
+    margin-right: 7em;
   }
   body main .grid-container {
     display: -ms-grid;
