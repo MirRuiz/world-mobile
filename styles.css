@@ -40,6 +40,8 @@ body header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 body header nav #ckeck {
@@ -66,16 +68,14 @@ body header nav ul.ul-menu {
   top: 100px;
   background-color: #776ba5ee;
   text-align: center;
-  -webkit-transition: margin-right .4s;
-  transition: margin-right .4s;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 body header nav ul.ul-menu li {
   display: none;
   line-height: 30px;
   margin: 50px 0;
-  -webkit-transition: all 5s;
-  transition: all 5s;
 }
 
 body header nav ul.ul-menu li a {
@@ -87,8 +87,6 @@ body header nav ul.ul-menu li a {
 
 body header nav ul.ul-menu li a:hover {
   color: black;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 body button {
@@ -113,6 +111,10 @@ main .titulo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .titulo h3 {
+  margin-left: 20px;
 }
 
 main .grid-container {
@@ -242,20 +244,14 @@ footer button.contact:hover {
   body header nav ul.ul-menu {
     background-color: transparent;
     list-style: none;
-    width: 45%;
+    width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-flex: 3;
-        -ms-flex-positive: 3;
-            flex-grow: 3;
     top: auto;
-    -webkit-transition: none;
-    transition: none;
-    margin: auto;
     padding: 0;
   }
   body header nav ul.ul-menu li {
@@ -263,8 +259,6 @@ footer button.contact:hover {
     display: -ms-flexbox;
     display: flex;
     line-height: 0px;
-    -webkit-transition: none;
-    transition: none;
   }
   body header nav ul.ul-menu li a {
     color: white;
@@ -274,6 +268,7 @@ footer button.contact:hover {
     padding: 5px;
     color: white;
     background: #1d4b79;
+    border-radius: 50%;
     -webkit-box-shadow: 0 4px 16px #1a7396;
             box-shadow: 0 4px 16px #1a7396;
   }

@@ -8,7 +8,6 @@ body {
     height: 10%;
     position: fixed;
     top: 0;
-    // left: 0;
     background-color: $primary-color;
     width: 100vw;
 
@@ -24,12 +23,12 @@ body {
       }
     }
     nav {
-      //prueba boton
       height: 100px;
       width: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: all ease 0.5s;
       #ckeck {
         display: none;
         &:checked ~ .ul-menu {
@@ -46,18 +45,16 @@ body {
         cursor: pointer;
       }
       ul.ul-menu {
-        // display: none; ////oculto hasta dar vida al menu hambueguesa
         position: fixed;
         top: 100px;
         background-color: $secondary-color;
         text-align: center;
-        transition: margin-right .4s;
+        transition: all ease 0.5s;
+        
         li {
           display: none;
           line-height: 30px;
           margin: 50px 0;
-          transition: all 5s;
-          
           a {
             color: white;
             text-decoration: none;
@@ -65,7 +62,6 @@ body {
             text-transform: uppercase;
             &:hover {
               color: black;
-              transition: 0.3s;
             }
           }
         }
@@ -86,6 +82,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    h3{
+      margin-left: 20px;
+    }
   }
   .grid-container {
     margin-bottom: 5vh;
@@ -161,7 +160,6 @@ footer {
       }
     }
     main {
-      // margin-top: 180px;
       .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -169,16 +167,6 @@ footer {
     }
   }
 }
-// @media screen and (min-width:760px){
-//   body{
-//     header{
-//       display:grid;
-//       flex-direction: row;
-//       background-color: transparent;
-//     }
-
-//   }
-// }
 @media screen and (min-width: 1000px) {
   body {
     header {
@@ -189,10 +177,7 @@ footer {
           filter: saturate(200%);
         }
         .logo {
-          display: block;
-        }
-        .marca {
-          // width: 3vw;
+          display: block;//creo se puede quitar
         }
       }
       nav {
@@ -200,34 +185,26 @@ footer {
         i.fas.fa-bars {
           display: none;
         }
-        ////////////mirar por aqui
         ul.ul-menu {
-          // position: sticky;
           background-color:transparent;
-          list-style: none; //
-          width: 45%;
+          list-style: none; 
+          width:60%;
           display: flex;
           justify-content: space-between;
-          flex-grow: 3;
           top: auto;
-          transition: none;
-          margin:auto;
           padding: 0;
           li {
             display: flex;
             line-height: 0px;
-            transition: none;
             a {
               color: white;
               text-decoration: none;
-              // font-size: 5px;
               &:hover {
                 padding: 5px;
                 color: white;
                 background: #1d4b79;
-                // border-radius: 50%;
+                border-radius: 50%;
                 box-shadow: 0 4px 16px rgb(26, 115, 150);
-                // transition: all 0.2s ease;
               }
             }
           }
