@@ -202,11 +202,9 @@ footer {
           top: auto;
           padding: 0;
           li {
-            display: flex;
             display:flex;
             justify-content: space-between;
             &:hover {
-              padding: 8px;
               color: white;
               background: #1d4b79;
               border-radius: 50%;

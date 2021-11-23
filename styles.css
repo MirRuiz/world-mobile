@@ -262,13 +262,11 @@ footer button.contact:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
   body header nav ul.ul-menu li:hover {
-    padding: 8px;
     color: white;
     background: #1d4b79;
     border-radius: 50%;
