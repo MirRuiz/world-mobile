@@ -226,7 +226,7 @@ footer button.contact:hover {
             justify-content: space-between;
   }
   body header .header-logo {
-    margin-left: 2em;
+    margin-left: 1em;
   }
   body header .header-logo:hover {
     -webkit-filter: saturate(200%);
