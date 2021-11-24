@@ -200,16 +200,22 @@ footer {
           display: flex;
           justify-content: space-between;
           top: auto;
-          padding: 0;
+          padding: 15px;
           li {
             display:flex;
             justify-content: space-between;
+            padding: 5px;;
             &:hover {
-
               color: white;
               background: #1d4b79;
               border-radius: 50%;
               box-shadow: 0 4px 16px rgb(26, 115, 150);
+            }
+            a{
+              padding:0 10px;
+              &:hover{
+                color:white;
+              }
             }
           }
         }

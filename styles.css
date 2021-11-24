@@ -64,7 +64,7 @@ body header nav .bar-btn {
 body header nav ul.ul-menu {
   position: fixed;
   top: 100px;
-  background-color: #776ba5ee;
+  background-color: #5748af;
   text-align: center;
   right: 0px;
   width: 0%;
@@ -177,7 +177,7 @@ footer ul.menu-footer a {
 }
 
 footer button.contact {
-  background-color: #776ba5ee;
+  background-color: #5748af;
   color: white;
   border-radius: 5px;
   border: none;
@@ -256,7 +256,7 @@ footer button.contact:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
     top: auto;
-    padding: 0;
+    padding: 15px;
   }
   body header nav ul.ul-menu li {
     display: -webkit-box;
@@ -265,6 +265,7 @@ footer button.contact:hover {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 5px;
   }
   body header nav ul.ul-menu li:hover {
     color: white;
@@ -272,6 +273,12 @@ footer button.contact:hover {
     border-radius: 50%;
     -webkit-box-shadow: 0 4px 16px #1a7396;
             box-shadow: 0 4px 16px #1a7396;
+  }
+  body header nav ul.ul-menu li a {
+    padding: 0 10px;
+  }
+  body header nav ul.ul-menu li a:hover {
+    color: white;
   }
   body button {
     margin-right: 2em;
@@ -286,7 +293,7 @@ footer button.contact:hover {
         -ms-flex-pack: center;
             justify-content: center;
     border-radius: 5px;
-    background-color: #776ba5ee;
+    background-color: #5748af;
     border: none;
     color: white;
     height: 5vh;
@@ -324,7 +331,7 @@ footer button.contact:hover {
     line-height: 25px;
   }
   body footer ul.menu-footer a:hover {
-    color: #776ba5ee;
+    color: #5748af;
   }
 }
 /*# sourceMappingURL=styles.css.map */
